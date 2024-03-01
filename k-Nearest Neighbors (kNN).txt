@@ -1,0 +1,83 @@
+
+KNN can be used for both classification and regression predictive problems. However, it is more widely used in classification problems in the industry.
+*Classification is a prediction task with a categorical target variable*
+*Regression is a prediction task in which the target variable is numeric*
+
+The K-Nearest Neighbor (KNN) algorithm is a popular machine learning technique used for classification and regression tasks. 
+It relies on the idea that similar data points tend to have similar labels or values.
+During the training phase, the KNN algorithm stores the entire training dataset as a reference. 
+When making predictions, it calculates the distance between the input data point and all the training examples, using a chosen distance metric such as Euclidean distance.
+
+***********************************************************
+In the case of classification, the algorithm assigns the most common class label among the K neighbors as the predicted label for the input data point.
+In the case of regression, it calculates the average or weighted average of the target values of the K neighbors to predict the value for the input data point.
+***********************************************************
+
+The new data point is classified based on similarity in the specific group of neighboring data points. 
+
+the boundary becomes smoother with increasing value of K.
+
+the error rate at K=1 is always zero for the training sample. This is because the closest point to any training data point is itself.
+Hence the prediction is always accurate with K=1. If validation error curve would have been similar, our choice of K would have been 1.
+
+**************************************************************
+There are various methods for calculating this distance:
+
+1- Euclidean distance (the most popular method)
+2- Manhattan (for continuous) 
+3- Minkowski distance (a generalized form of Euclidean and manhattan distances)
+4- Chebyshev 
+5- cosine 
+6- hamming distance (categorical variables)
+
+***************************************************************
+1- Sort the calculated distances in ascending order based on distance values
+2- Get top k rows from the sorted array
+3- Get the most frequent class of these rows
+4- Return the predicted class
+
+*************************************************************
+
+The KNN algorithm is one of the simplest classification algorithms. 
+Even with such simplicity, it can give highly competitive results. 
+KNN algorithm can also be used for regression problems. 
+The only difference from the discussed methodology will be using averages of nearest neighbors rather than voting from nearest neighbors. 
+
+
+*************************************************************
+
+For a very low value of k (suppose k=1), the model is overfitting the training data, which leads to a high error rate on the validation set. 
+On the other hand, for a high value of k, the model performs poorly on both the train and validation sets.
+
+
+One can use cross-validation to select the optimal value of k for the k-NN algorithm, which helps improve its performance and prevent overfitting or underfitting. Cross-validation is also used to identify the outliers before applying the KNN algorithm.
+
+*************************************************************
+
+A. KNN algorithm is most commonly used for:
+1. Disease prediction – predicts the likelihood of a disease based on symptoms and the data available.
+2. Handwriting recognition – recognizes the handwritten characters.
+3. Image classification – recognizes images in computer vision.
+
+*************************************************************
+
+This algorithm is popularly known for various applications like genetics, forecasting, etc. The algorithm is best when more features are present and out shows SVM in this case.
+
+Generally we use the Square root of the number of samples in the dataset as value for K. 
+An optimal value has to be found out since lower value may lead to overfitting and higher value may require high computational complication in distance. 
+
+********************************* KNN in Regression ****************************
+
+I have seldom seen KNN being implemented on any regression task. 
+
+how KNN can be equally effective when the target variable is continuous in nature.
+
+You would likely say that since ID11 is closer to points 5 and 1, so it must have a weight similar to these IDs, probably between 72-77 kgs (weights of ID1 and ID5 from the table).
+
+
+
+
+
+
+
+
